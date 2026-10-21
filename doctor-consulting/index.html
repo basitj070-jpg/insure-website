@@ -1,0 +1,521 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#173c39">
+  <meta name="description" content="Find trusted doctors and book convenient in-person or online consultations with MediConsult. Quality healthcare made simple.">
+  <title>MediConsult — Care that fits your life</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css?v=2.2">
+  
+  <!-- Font Awesome Icons -->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <!-- Top Navigation Bar -->
+  <header class="topbar" id="navbar">
+    <a class="brand" href="#home" aria-label="MediConsult home">
+      <span class="brand-mark"><i class="fas fa-plus" aria-hidden="true"></i></span>
+      Medi<span>Consult</span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">
+      <i class="fas fa-bars" aria-hidden="true"></i>
+    </button>
+    <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+      <a class="nav-link active" href="#home">Home</a>
+      <a class="nav-link" href="#doctors">Find doctors</a>
+      <a class="nav-link" href="#specialties">Specialties</a>
+      <a class="nav-link" href="#how">How it works</a>
+      <a class="nav-link" href="#reviews">Reviews</a>
+      <a class="nav-link" href="#faq">FAQ</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="text-btn" id="loginBtn">
+        <i class="fas fa-user-circle" aria-hidden="true"></i> Log in
+      </button>
+      <a class="button button-small" href="#doctors">
+        Book appointment <span><i class="fas fa-calendar-check" aria-hidden="true"></i></span>
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <div class="eyebrow">
+          <span class="pulse"></span> YOUR HEALTH, OUR PRIORITY
+        </div>
+        <h1>
+          <span class="hero-line">Better care starts</span>
+          <span class="hero-line">with <em>the right doctor.</em></span>
+        </h1>
+        <p class="hero-sub">
+          Find trusted specialists, compare verified patient reviews, and book an in-person or virtual consultation with ease. Quality care is closer than you think.
+        </p>
+
+        <!-- Doctor Search Panel -->
+        <form class="search-panel" id="searchForm" role="search" aria-label="Find doctors">
+          <label class="search-field">
+            <span class="field-icon"><i class="fas fa-search" aria-hidden="true"></i></span>
+            <span>
+              <small>I'm looking for</small>
+              <input id="searchInput" type="search" placeholder="Doctor, condition, or specialty" aria-label="Doctor, condition, or specialty">
+            </span>
+          </label>
+          <span class="search-divider" aria-hidden="true"></span>
+          <label class="search-field location-field">
+            <span class="field-icon"><i class="fas fa-map-marker-alt" aria-hidden="true"></i></span>
+            <span>
+              <small>Location</small>
+              <input id="locationInput" type="search" placeholder="City or area (e.g. Clifton)" aria-label="City or area">
+            </span>
+          </label>
+          <button class="button search-button" type="submit">
+            Find a doctor <span><i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+          </button>
+        </form>
+
+        <!-- Social Proof -->
+        <div class="hero-proof">
+          <div class="avatar-stack" aria-hidden="true">
+            <span>👩🏻‍⚕️</span>
+            <span>👨🏽‍⚕️</span>
+            <span>👩🏾‍⚕️</span>
+            <span>+</span>
+          </div>
+          <p><strong>1,200+ patients</strong><br>booked care this week</p>
+          <div class="proof-stars" aria-label="Average rating 4.9 out of 5 stars">
+            <span class="stars">★★★★★</span> <small>4.9/5 satisfaction</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Artwork & Floating Cards -->
+      <div class="hero-art" aria-hidden="true">
+        <div class="art-glow"></div>
+        <div class="art-orbit orbit-one"></div>
+        <div class="art-orbit orbit-two"></div>
+        <div class="art-sun"></div>
+        
+        <div class="hero-photo">
+          <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=900&q=85" alt="Senior female physician smiling warmly in clinic">
+        </div>
+
+        <!-- Floating Badge 1: Availability -->
+        <div class="float-card availability">
+          <span class="online-dot"><span class="radar-wave"></span></span>
+          <div>
+            <b>Care, on your time</b>
+            <small id="availabilitySubtext">14 appointments open today</small>
+          </div>
+          <span class="float-arrow">↗</span>
+        </div>
+
+        <!-- Floating Badge 2: Rating -->
+        <div class="float-card rating">
+          <span class="rating-icon"><i class="fas fa-star"></i></span>
+          <div>
+            <b>4.9 / 5.0</b>
+            <small>Over 48k happy patients</small>
+          </div>
+        </div>
+
+        <div class="art-caption">A more personal<br>kind of healthcare.</div>
+      </div>
+
+      <div class="hero-bottom">
+        <span>CARE THAT CONNECTS</span>
+        <div class="bottom-line"></div>
+        <span>IN PERSON · ONLINE</span>
+      </div>
+    </section>
+
+    <!-- Key Metrics / Stats Section -->
+    <section class="stats" aria-label="MediConsult at a glance">
+      <div class="stat-box">
+        <strong>1,200<span>+</span></strong>
+        <small>verified doctors</small>
+      </div>
+      <div class="stat-box">
+        <strong>48<span>k</span></strong>
+        <small>patients cared for</small>
+      </div>
+      <div class="stat-box">
+        <strong>32<span>+</span></strong>
+        <small>medical specialties</small>
+      </div>
+      <div class="stat-box">
+        <strong>4.9<span>/5</span></strong>
+        <small>patient satisfaction</small>
+      </div>
+      <div class="stats-note">
+        Trusted doctors.<br><b>Compassionate care.</b>
+      </div>
+    </section>
+
+    <!-- Specialties Grid Section -->
+    <section class="section specialties-section" id="specialties">
+      <div class="section-heading">
+        <div>
+          <div class="eyebrow">CARE FOR EVERY YOU</div>
+          <h2>What can we help<br>you <em>feel better about?</em></h2>
+        </div>
+        <a href="#doctors" class="under-link" id="viewAllSpecialties">
+          Explore all specialties <span><i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+        </a>
+      </div>
+      <div class="specialty-grid" id="specialtyGrid"></div>
+    </section>
+
+    <!-- Doctors Catalog Section -->
+    <section class="doctors-section" id="doctors">
+      <div class="section doctor-section-inner">
+        <div class="section-heading doctor-heading">
+          <div>
+            <div class="eyebrow">GOOD PEOPLE. GREAT CARE.</div>
+            <h2>Meet your new<br><em>favorite doctor.</em></h2>
+          </div>
+          <p>Thoughtful, experienced professionals<br>who prioritize your well-being.</p>
+        </div>
+
+        <!-- Filters & Sorting Bar -->
+        <div class="filter-row">
+          <div class="filter-pills" id="filterPills" role="toolbar" aria-label="Filter doctors by specialty">
+            <button class="filter-pill selected" data-filter="All">All doctors</button>
+            <button class="filter-pill" data-filter="Cardiology">Cardiology</button>
+            <button class="filter-pill" data-filter="Dermatology">Dermatology</button>
+            <button class="filter-pill" data-filter="Family Medicine">Family medicine</button>
+            <button class="filter-pill" data-filter="Pediatrics">Pediatrics</button>
+            <button class="filter-pill" data-filter="Neurology">Neurology</button>
+          </div>
+          <label class="sort-wrap">
+            <span>Sort by</span>
+            <select id="sortSelect" aria-label="Sort doctors">
+              <option value="recommended">Recommended</option>
+              <option value="rating">Top rated</option>
+              <option value="price">Lowest fee</option>
+              <option value="experience">Most experienced</option>
+            </select>
+          </label>
+        </div>
+
+        <!-- Doctor Cards Grid -->
+        <div class="doctor-grid" id="doctorGrid" aria-live="polite"></div>
+
+        <!-- No Results Fallback -->
+        <div class="no-results" id="noResults" hidden>
+          <span class="no-results-icon"><i class="fas fa-stethoscope"></i></span>
+          <h3>No doctors found just yet</h3>
+          <p>Try a different keyword or location, or reset the filters to see all available specialists.</p>
+          <button id="clearSearch" class="button button-outline">
+            Reset filters <span><i class="fas fa-redo-alt" aria-hidden="true"></i></span>
+          </button>
+        </div>
+
+        <div class="browse-row">
+          <span>Showing <b id="resultCount">0</b> verified doctors available for booking</span>
+          <button class="button button-outline" id="showMore">
+            Reset filters & show all <span><i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-section section" id="how">
+      <div class="how-intro">
+        <div class="eyebrow">A LITTLE LESS BACK AND FORTH</div>
+        <h2>Care, made<br><em>easy as 1–2–3.</em></h2>
+        <p>From finding the right specialist to feeling healthy again, we keep every step straightforward and calm.</p>
+        <a class="under-link" href="#doctors">
+          Find your doctor <span><i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+        </a>
+        <div class="how-decoration" aria-hidden="true">
+          <i class="fas fa-heartbeat"></i>
+        </div>
+      </div>
+
+      <div class="steps">
+        <article class="step">
+          <div class="step-num">01</div>
+          <div>
+            <span class="step-icon"><i class="fas fa-search" aria-hidden="true"></i></span>
+            <h3>Find your person</h3>
+            <p>Explore trusted doctors by specialty, clinic location, fee, and verified patient reviews.</p>
+          </div>
+          <span class="step-arrow"><i class="fas fa-chevron-right" aria-hidden="true"></i></span>
+        </article>
+
+        <article class="step">
+          <div class="step-num">02</div>
+          <div>
+            <span class="step-icon"><i class="far fa-calendar-check" aria-hidden="true"></i></span>
+            <h3>Pick a time that fits</h3>
+            <p>Choose an available slot for an in-person clinic visit or a secure video consultation.</p>
+          </div>
+          <span class="step-arrow"><i class="fas fa-chevron-right" aria-hidden="true"></i></span>
+        </article>
+
+        <article class="step">
+          <div class="step-num">03</div>
+          <div>
+            <span class="step-icon"><i class="fas fa-shield-alt" aria-hidden="true"></i></span>
+            <h3>Feel looked after</h3>
+            <p>Receive your instant confirmation, speak with your doctor, and continue your wellness journey.</p>
+          </div>
+          <span class="step-arrow"><i class="fas fa-check" aria-hidden="true"></i></span>
+        </article>
+      </div>
+    </section>
+
+    <!-- Trust Banner -->
+    <section class="care-banner" id="about">
+      <div class="banner-icon"><i class="fas fa-heartbeat" aria-hidden="true"></i></div>
+      <div>
+        <div class="eyebrow">A BETTER WAY TO GET CARE</div>
+        <h2>Good healthcare feels<br><em>like someone has your back.</em></h2>
+        <p>Every practitioner on MediConsult is carefully reviewed for qualifications, patient care excellence, and clinical transparency.</p>
+      </div>
+      <a href="#doctors" class="button button-light">
+        Meet our doctors <span><i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+      </a>
+      <div class="banner-shape" aria-hidden="true"></div>
+    </section>
+
+    <!-- Testimonial Section with Auto Interval Animation -->
+    <section class="testimonial section" id="reviews">
+      <div class="quote-mark" aria-hidden="true">“</div>
+      <div class="eyebrow">KIND WORDS, REAL PEOPLE</div>
+
+      <div class="testimonial-card" id="testimonialCard">
+        <!-- Progress bar that animates during the interval -->
+        <div class="testimonial-progress" aria-hidden="true">
+          <div class="progress-bar" id="testimonialProgressBar"></div>
+        </div>
+
+        <div class="testimonial-content" id="testimonialContent">
+          <blockquote id="quoteText">“For the first time, booking a doctor didn't feel like another thing on my to-do list. I found someone I really trust.”</blockquote>
+          <div class="quote-person">
+            <span class="quote-avatar" id="quoteAvatar">SA</span>
+            <div>
+              <b id="quoteName">Sana A.</b>
+              <small id="quoteDate">Patient since 2023</small>
+            </div>
+            <span class="quote-rating" aria-label="5 stars rating">★★★★★</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial Navigation Controls -->
+      <div class="quote-controls">
+        <div class="quote-dots" id="quoteDots" role="tablist" aria-label="Testimonial slides"></div>
+        <div class="quote-count">
+          <span id="quoteCurrent">01</span>
+          <span class="quote-divider">—</span>
+          <span id="quoteTotal">03</span>
+          <button id="prevQuote" aria-label="Previous testimonial" title="Previous review"><i class="fas fa-chevron-left"></i></button>
+          <button id="nextQuote" aria-label="Next testimonial" title="Next review"><i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Accordion Section -->
+    <section class="faq-section section" id="faq">
+      <div>
+        <div class="eyebrow">GOOD QUESTIONS</div>
+        <h2>A few things<br>you might <em>wonder.</em></h2>
+        <p>Have questions about bookings or procedures? <a href="mailto:hello@mediconsult.example">We’re here to help ↗</a></p>
+      </div>
+      <div class="faq-list">
+        <details>
+          <summary>How do I book an appointment? <span class="faq-icon">+</span></summary>
+          <p>Browse our doctor directory, select the specialty or doctor that matches your needs, choose between a clinic visit or online consultation, and select an available time. Fill out your contact details to receive a confirmed booking instantly.</p>
+        </details>
+        <details>
+          <summary>Can I meet with my doctor online? <span class="faq-icon">+</span></summary>
+          <p>Yes! Many of our certified doctors offer secure video consultations. Simply look for the "Online visits" badge on the doctor's profile and choose "Online consultation" when booking.</p>
+        </details>
+        <details>
+          <summary>How are doctors verified on MediConsult? <span class="faq-icon">+</span></summary>
+          <p>Doctors listed on MediConsult are required to submit valid medical board registrations (e.g. MBBS, FCPS, MCPS, BDS) and license verifications to ensure high standards of patient safety and care quality.</p>
+        </details>
+        <details>
+          <summary>Can I cancel or reschedule my appointment? <span class="faq-icon">+</span></summary>
+          <p>Your booking reference code is immediately stored in your browser. If you need to make changes or cancel, you can contact the clinic directly using the information provided in your booking confirmation.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <!-- Live Interval Notification Pill -->
+  <aside class="live-activity-badge" id="liveActivity" aria-live="polite">
+    <div class="activity-pulse"></div>
+    <div class="activity-info">
+      <strong id="activityTitle">Dr. Omar Farooq</strong>
+      <span id="activityDesc">has 2 appointment slots available today</span>
+    </div>
+    <button class="activity-close" id="closeActivity" aria-label="Dismiss notification">&times;</button>
+  </aside>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <a class="brand brand-light" href="#home">
+          <span class="brand-mark"><i class="fas fa-plus" aria-hidden="true"></i></span>
+          Medi<span>Consult</span>
+        </a>
+        <p>Care that fits your life.<br>And the people living it.</p>
+        <div class="socials" aria-label="Social media links">
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <b>Explore</b>
+        <a href="#doctors">Find a doctor</a>
+        <a href="#specialties">Specialties</a>
+        <a href="#how">How it works</a>
+        <a href="#reviews">Patient stories</a>
+      </div>
+      <div class="footer-col">
+        <b>Get in touch</b>
+        <a href="mailto:hello@mediconsult.example">hello@mediconsult.example</a>
+        <a href="tel:+923001234567">+92 300 123 4567</a>
+        <span>Mon–Sat, 9:00 AM – 6:00 PM</span>
+      </div>
+      <div class="footer-note">
+        Your health story<br>starts <em>here.</em>
+        <span><i class="fas fa-heart" aria-hidden="true"></i></span>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 MediConsult Healthcare Network. All rights reserved.</span>
+      <div>
+        <a href="#faq">Privacy Policy</a>
+        <a href="#faq">Terms of Service</a>
+        <a href="#faq">Accessibility</a>
+      </div>
+      <span>Built around you <b><i class="fas fa-heart" aria-hidden="true"></i></b></span>
+    </div>
+  </footer>
+
+  <!-- Doctor Profile Modal -->
+  <div class="modal-backdrop profile-backdrop" id="profileModal" hidden>
+    <section class="profile-modal" role="dialog" aria-modal="true" aria-labelledby="profileName">
+      <button class="profile-close" aria-label="Close doctor profile"><i class="fas fa-times" aria-hidden="true"></i></button>
+      <div id="profileContent"></div>
+    </section>
+  </div>
+
+  <!-- Multi-step Appointment Booking Modal -->
+  <div class="modal-backdrop" id="bookingModal" hidden>
+    <section class="booking-modal" role="dialog" aria-modal="true" aria-labelledby="bookingTitle">
+      <button class="modal-close" aria-label="Close booking modal">×</button>
+      
+      <!-- Stepper Progress Bar -->
+      <div class="modal-progress" aria-label="Booking step progress">
+        <span class="active" aria-current="step"></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <p class="step-caption" id="bookingStepCaption">STEP 1 OF 3 · APPOINTMENT</p>
+      <div class="eyebrow">LET'S GET YOU THE RIGHT CARE</div>
+      <h2 id="bookingTitle">Book your<br><em>appointment.</em></h2>
+      
+      <!-- Doctor Mini Profile Header -->
+      <div class="booking-doctor" id="bookingDoctor"></div>
+
+      <!-- Step Form -->
+      <form id="bookingForm" novalidate>
+        <!-- Step 1: Date & Time -->
+        <div class="booking-step" data-step="0">
+          <div class="form-row">
+            <label>
+              Consultation type
+              <select id="consultType" required>
+                <option value="Clinic visit">Clinic visit</option>
+                <option value="Online consultation">Online consultation</option>
+              </select>
+            </label>
+            <label>
+              Choose a date
+              <select id="appointmentDate" required></select>
+            </label>
+          </div>
+          <label>
+            Available time slot
+            <select id="appointmentTime" required></select>
+          </label>
+          <div class="booking-total" id="bookingTotal"></div>
+          <button type="button" class="button modal-submit step-next">
+            Continue to patient details <i class="fas fa-arrow-right" aria-hidden="true"></i>
+          </button>
+        </div>
+
+        <!-- Step 2: Patient Information -->
+        <div class="booking-step" data-step="1" hidden>
+          <div class="form-row">
+            <label>
+              Full name
+              <input name="name" required autocomplete="name" placeholder="e.g. Ayesha Siddiqui">
+            </label>
+            <label>
+              Email address
+              <input name="email" type="email" required autocomplete="email" placeholder="you@example.com">
+            </label>
+          </div>
+          <label>
+            Phone number
+            <input name="phone" type="tel" required autocomplete="tel" placeholder="+92 300 1234567">
+          </label>
+          <label>
+            What would you like help with? (Optional)
+            <textarea name="reason" rows="3" placeholder="Briefly describe your symptoms or reason for visit..."></textarea>
+          </label>
+          <div class="booking-nav">
+            <button type="button" class="button button-outline step-back">
+              <i class="fas fa-arrow-left" aria-hidden="true"></i> Back
+            </button>
+            <button type="button" class="button step-next">
+              Review booking <i class="fas fa-arrow-right" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Step 3: Review & Confirm -->
+        <div class="booking-step" data-step="2" hidden>
+          <div class="review-card" id="bookingReview"></div>
+          <div class="booking-nav">
+            <button type="button" class="button button-outline step-back">
+              <i class="fas fa-arrow-left" aria-hidden="true"></i> Edit details
+            </button>
+            <button type="submit" class="button">
+              Confirm appointment <i class="fas fa-check" aria-hidden="true"></i>
+            </button>
+          </div>
+          <p class="privacy-note">Your request is securely handled. No upfront payment required.</p>
+        </div>
+      </form>
+    </section>
+  </div>
+
+  <!-- Notification Toast -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- Scripts -->
+  <script defer src="script.js?v=2.2"></script>
+</body>
+</html>
